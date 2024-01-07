@@ -18,7 +18,7 @@ const db = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env
     },
     // configura como va a ser el comportamiento para conexiones nuevas o existentes. Lo que va a ser mysql es mantener las conexiones que estén vivas se sigan utilizando y no se cree una nueva.
     pool: {
-        max: 5, // máximo de conexiones a mantener
+        max: 10, // máximo de conexiones a mantener
         min: 0, // mínimo de conexiones a mantener
         acquire: 30000, // son milisegundos, o sea 30s .- es el tiempo que va a pasar tratando de elaborar una conexión antes de marcar un error
         idle: 10000 // 10s - si nadie esta usando la conexión le da 10s para que se finalice la conexión.
