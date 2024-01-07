@@ -1,6 +1,6 @@
 import express from 'express';
 import helmet from 'helmet';
-import csrf from 'csrf';
+// import csrf from 'csrf';
 import cookieParser from 'cookie-parser';
 import usuarioRoutes from './routes/usuarioRoutes.js';
 import propiedadesRoutes from './routes/propiedadesRoutes.js';
@@ -19,17 +19,17 @@ app.use(cookieParser());
 
 // Habilitar CSRF
 // Al configurarlo de esta forma lo habilitamos de forma global en nuestra aplicación.
-// app.use(helmet());
+app.use(helmet());
 
-const tokens = new csrf();
+// const tokens = new csrf();
 
-// Middleware para agregar el token CSRF a las vistas
-app.use((req, res, next) => {
-    const secret = tokens.secretSync(); // Reemplaza con tu propia clave secreta
-    const token = tokens.create(secret);
-    res.locals.csrfToken = token;
-    next();
-});
+// // Middleware para agregar el token CSRF a las vistas
+// app.use((req, res, next) => {
+//     const secret = tokens.secretSync(); // Reemplaza con tu propia clave secreta
+//     const token = tokens.create(secret);
+//     res.locals.csrfToken = token;
+//     next();
+// });
   
 
 // Conexión a la base de datos
