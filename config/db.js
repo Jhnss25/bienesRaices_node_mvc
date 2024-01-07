@@ -10,7 +10,7 @@ dotenv.config({ path: '.env' });
 // 4º Objeto de configuración para pasarle mas opciones
 const db = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env.BD_PASS ?? '', {
     host: process.env.BD_HOST,
-    port: 3306,
+    port: 3307,
     dialect: 'mysql', /* base de Datos */
     define: {
         // lo que hace es que cuando un usuario se registra agrega 2 columnas extras a la tabla de usuarios, una va a tener cuando fue creado ese usuario o tabla de registro, y el otro va a ser cuando fue actualizado
