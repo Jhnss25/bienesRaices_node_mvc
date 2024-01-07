@@ -14,6 +14,7 @@ block contenido
                 label(for="categorias" class="text-sm w-24 uppercase text-gray-500 font-bold") Categorías
                 select(id="categorias" class="flex-1 bg-white w-full px-3 py-2 border border-gray-300 rounded-md shadow")
                     option(value="") - Seleccione -
+
                     each categoria in categorias 
                         option(value=categoria.id)= categoria.nombre
 

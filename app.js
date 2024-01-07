@@ -1,5 +1,5 @@
 import express from 'express';
-import helmet from 'helmet';
+// import helmet from 'helmet';
 // import csrf from 'csrf';
 import cookieParser from 'cookie-parser';
 import usuarioRoutes from './routes/usuarioRoutes.js';
@@ -19,7 +19,7 @@ app.use(cookieParser());
 
 // Habilitar CSRF
 // Al configurarlo de esta forma lo habilitamos de forma global en nuestra aplicación.
-app.use(helmet());
+// app.use(helmet());
 
 // const tokens = new csrf();
 
